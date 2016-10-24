@@ -81,7 +81,9 @@ form.addEventListener('submit', function(event){
 
   console.log("fetching from ", url);
 
-  fetch(url);
-
+  fetch(url).then(function(response){
+    console.log(response);
+  });
+    console.log("after fetch");
   return false; 
 });
