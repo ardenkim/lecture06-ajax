@@ -66,5 +66,15 @@ function renderTrack(track){
 } //end method
 
 //call this function `forEach` element in the `songs` array!
-songs.forEach(renderTrack);
+// songs.forEach(renderTrack);
 
+var form = document.querySelector('form');
+form.addEventListener('submit', function(event){
+  console.log("Submitted!");
+
+  event.preventDefault();
+
+  // do my thing
+
+  return false; 
+});
