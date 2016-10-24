@@ -69,12 +69,19 @@ function renderTrack(track){
 // songs.forEach(renderTrack);
 
 var form = document.querySelector('form');
+var input = document.querySelector('#searchQuery');
 form.addEventListener('submit', function(event){
   console.log("Submitted!");
 
   event.preventDefault();
 
   // do my thing
+  var userInput = input.value;
+  var url = 'https://api.spotify.com/v1/search?type=track&q=' + userInput;
+
+  console.log("fetching from ", url);
+
+  fetch(url);
 
   return false; 
 });
