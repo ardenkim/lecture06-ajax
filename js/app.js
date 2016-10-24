@@ -86,6 +86,7 @@ form.addEventListener('submit', function(event){
     return newPromise;
   }).then(function(data){
     console.log(data);
+    data.tracks.items.forEach(renderTrack);
   });
     console.log("after fetch");
   return false; 
