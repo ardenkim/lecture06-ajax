@@ -32,7 +32,7 @@ function renderTrack(track){
   var imgElement = document.createElement('img');
 
   //set the image's `src` to be the track's `album_image`
-  imgElement.setAttribute('src', track.album_image);
+  imgElement.setAttribute('src', track.album.images[0].url);
 
   //always give images `alt` attributes! The `name` of the track will work fine
   imgElement.setAttribute('alt', track.name);
