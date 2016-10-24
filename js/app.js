@@ -82,7 +82,10 @@ form.addEventListener('submit', function(event){
   console.log("fetching from ", url);
 
   fetch(url).then(function(response){
-    console.log(response);
+    var newPromise = response.json();
+    return newPromise;
+  }).then(function(data){
+    console.log(data);
   });
     console.log("after fetch");
   return false; 
