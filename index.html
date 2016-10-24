@@ -32,9 +32,10 @@
       <!-- data will be added here -->
     </div>
 
-    <form role="form">
+    <form role="form" method="GET" action="https://api.spotify.com/v1/search">
       <label for="searchQuery"> What do you want to hear?</label>
       <input type="text" name="q" id="searchQuery">
+      <input type="test" name="type" value="track">
 
       <button type="submit" class="btn">
         <i class="fa fa-music" aria-hidden="true"></i> Search!
